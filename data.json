@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1769630062347,
+    "produceName": "Sorghum",
+    "tonnage": 20,
+    "cost": 11000,
+    "createdAt": "2026-01-28T19:54:22.347Z"
+  },
+  {
+    "id": 1769630157619,
+    "produceName": "Maize",
+    "tonnage": 30,
+    "cost": 5000,
+    "createdAt": "2026-01-28T19:55:57.619Z"
+  }
+]
