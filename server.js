@@ -45,12 +45,21 @@ function writeDataFile(data) {
  */
 app.get("/kgl/procurement", (req, res) => {
   try {
-    const records = readDataFile();
+    if (!fs.existsSync(DATA_FILE)) {
+      return res.status(200).json([]);
+    }
+
+    const data = fs.readFileSync(DATA_FILE, "utf8");
+    const records = data ? JSON.parse(data) : [];
+
     res.status(200).json(records);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({
+      error: "Failed to load procurement data",
+    });
   }
 });
+
 
 /**
  * POST /kgl/procurement
