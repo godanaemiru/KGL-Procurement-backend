@@ -14,10 +14,6 @@ const DATA_FILE = path.join(__dirname, "data.json");
 app.use(express.json());
 
 
-app.get("/", (req, res) => {
-  res.status(200).send("KGL Procurement API is running");
-});
-
 /**
   Read data.json safely
  */
